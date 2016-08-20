@@ -13,11 +13,11 @@ RUN ln -s `which nodejs` /usr/bin/node
 # Non-privileged user
 RUN useradd -m audiogram
 USER audiogram
-WORKDIR /home/test21
+WORKDIR /home/audiogram
 
 # Clone repo
 RUN git clone https://github.com/megive/test21.git
-WORKDIR /home/test21/audiogram
+WORKDIR /home/audiogram/audiogram
 
 # Install dependencies
 RUN npm install
